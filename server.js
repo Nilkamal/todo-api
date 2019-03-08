@@ -22,7 +22,7 @@ const db = knex({
     //   database : 'todo'
     // }
   });
-
+console.log(db);
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
