@@ -10,7 +10,10 @@ const todo = require('./controllers/todo');
 
 const db = knex({
     client: 'pg',
-    connection: process.env.PG_CONNECTION_STRING
+    connection: {
+        connectionString: process.env.DATABASE_URL,
+        ssl: true
+    }
     // connection: {
 
     //   host : '127.0.0.1',
