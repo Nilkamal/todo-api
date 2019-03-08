@@ -4,6 +4,7 @@ const handleGetAll = (db) => (req,res) => {
         res.json(todos);
     }))
     .catch(err=>{
+        console.log(err);
         res.status(400).json('Error while getting todos');
     })
 }

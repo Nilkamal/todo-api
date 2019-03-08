@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const moment = require('moment');
 const cors = require('cors');
 const knex = require('knex');
 const today = require('./controllers/today');
@@ -22,7 +21,6 @@ const db = knex({
     //   database : 'todo'
     // }
   });
-console.log(db);
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
