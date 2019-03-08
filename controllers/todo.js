@@ -1,4 +1,5 @@
 const handleGetAll = (db) => (req,res) => {
+    console.log(process.env.DATABASE_URL)
     console.log('I am getting', db);
     db.select('*').from('item').returning('*').then((todos=>{
         res.json(todos);
